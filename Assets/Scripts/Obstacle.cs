@@ -6,6 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     private GameObject player;
     public Animator animator;
+    public AudioSource audioPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class Obstacle : MonoBehaviour
         {
             animator.SetFloat("exp", 2);
             Destroy(player.gameObject);
+            audioPlayer.Play();
         }
     }
 }
